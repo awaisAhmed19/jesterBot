@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jester Bot</title>
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='style.css') }}" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- HTMX -->
+<script src="https://unpkg.com/htmx.org@1.5.0"></script>
+  </head>
+  <body>
+    <input class="inputbar" id="user-input" type="textarea" name="input" placeholder="type something...">      
+    <button hx-get="/get-response" hx-trigger="click" class="Submitbutton" hx-target="#response-div">generate</button>  
+    <div id="response-div" class="response"></div>
+    
+
+  </body>
+</html>
+
